@@ -1,20 +1,20 @@
 {
-  "name": "functions-app",
+  "name": "with-shopify-functions",
   "private": true,
   "scripts": {
     "build": "shopify app build",
     "dev": "shopify app dev",
     "info": "shopify app info",
     "generate": "shopify app generate",
-    "deploy": "shopify app env pull"
+    "deploy": "shopify app deploy"
   },
   "dependencies": {
     "@shopify/app": "3.44.1",
-    "@shopify/cli": "3.44.1"
+    "@shopify/cli": "3.44.1",
+    "@shopify/theme": "^3.44.1"
   },
   "devDependencies": {
     "@shopify/shopify_function": "^0.0.3",
-    "@types/node": "^18.14.1",
     "javy": "^0.0.3"
   }
 }

@@ -31,3 +31,6 @@ extensions/*/generated
 
 # Node library SQLite database
 database.sqlite
+
+# Adastra
+assets/adastra.manifest.json
