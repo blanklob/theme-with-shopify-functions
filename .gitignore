@@ -30,5 +30,4 @@ extensions/*/build
 extensions/*/generated
 
 # Node library SQLite database
-web/database.sqlite
-
+database.sqlite
