@@ -14,6 +14,7 @@
   },
   "devDependencies": {
     "@shopify/shopify_function": "^0.0.3",
+    "@types/node": "^18.14.1",
     "javy": "^0.0.3"
   }
 }

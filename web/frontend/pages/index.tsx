@@ -3,22 +3,19 @@ import {
   Page,
   Layout,
   TextContainer,
-  Image,
   Stack,
   Link,
   Text
 } from "@shopify/polaris";
 import { TitleBar } from "@shopify/app-bridge-react";
 
-import { trophyImage } from "../assets";
-
 export default function HomePage() {
   return (
     <Page narrowWidth>
-      <TitleBar title="App name" primaryAction={null} />
+      <TitleBar title="App name" />
       <Layout>
         <Layout.Section>
-          <AlphaCard sectioned>
+          <AlphaCard>
             <Stack
               wrap={false}
               spacing="extraTight"
@@ -62,15 +59,6 @@ export default function HomePage() {
                     📚{" "}
                   </p>
                 </TextContainer>
-              </Stack.Item>
-              <Stack.Item>
-                <div style={{ padding: "0 20px" }}>
-                  <Image
-                    source={trophyImage}
-                    alt="Nice work on building a Shopify app"
-                    width={120}
-                  />
-                </div>
               </Stack.Item>
             </Stack>
           </AlphaCard>

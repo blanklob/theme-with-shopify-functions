@@ -14,13 +14,15 @@ import { Routes as ReactRouterRoutes, Route } from "react-router-dom";
  *
  * @return {Routes} `<Routes/>` from React Router, with a `<Route/>` for each file in `pages`
  */
-export default function Routes({ pages }) {
+export default function Routes({ pages }: {
+  pages: any
+}) {
   const routes = useRoutes(pages);
   const routeComponents = routes.map(({ path, component: Component }) => (
     <Route key={path} path={path} element={<Component />} />
   ));
 
-  const NotFound = routes.find(({ path }) => path === "/notFound").component;
+  const NotFound = routes.find(({ path }) => path === "/notFound")?.component;
 
   return (
     <ReactRouterRoutes>
@@ -30,7 +32,7 @@ export default function Routes({ pages }) {
   );
 }
 
-function useRoutes(pages) {
+function useRoutes(pages: any) {
   const routes = Object.keys(pages)
     .map((key) => {
       let path = key

@@ -34,9 +34,9 @@ export default function App() {
   );
 }
 
-ReactDOM.createRoot(document.getElementById('app')).render(
-    <React.StrictMode>
-        <App />
-    </React.StrictMode>,
+ReactDOM.createRoot(document.getElementById('app') as HTMLElement).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
 )
   
