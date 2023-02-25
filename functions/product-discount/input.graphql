@@ -1,0 +1,40 @@
+query Input {
+  cart {
+    lines {
+      quantity
+      merchandise {
+        __typename
+        ... on ProductVariant {
+          id
+          sku
+          weight
+          product {
+            id
+          }
+        }
+      }
+    }
+    buyerIdentity {
+      email
+      customer {
+        amountSpent {
+          amount
+        }
+        isVip: hasAnyTag(tags: ["VIP"])
+      }
+    }
+    cost {
+      subtotalAmount {
+        amount
+      }
+      totalAmount {
+        amount
+      }
+    }
+  }
+  discountNode {
+    metafield(namespace: "branded-vertical-ext", key: "function-configuration") {
+      value
+    }
+  }
+}

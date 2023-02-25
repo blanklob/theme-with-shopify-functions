@@ -1,0 +1,19 @@
+{
+  "name": "functions-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon index.js --ignore ./frontend",
+    "serve": "cross-env NODE_ENV=production node index.js"
+  },
+  "dependencies": {
+    "@shopify/shopify-app-express": "^1.2.1",
+    "@shopify/shopify-app-session-storage-sqlite": "^1.1.0",
+    "compression": "^1.7.4",
+    "serve-static": "^1.15.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "nodemon": "^2.0.20"
+  }
+}

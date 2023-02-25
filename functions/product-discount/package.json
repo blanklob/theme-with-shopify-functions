@@ -1,0 +1,27 @@
+{
+  "name": "product-discount",
+  "private": true,
+  "scripts": {
+    "typegen": "npm exec -- shopify app function typegen",
+    "build": "npm exec -- shopify app function build",
+    "preview": "npm exec -- shopify app function run"
+  },
+  "dependencies": {
+    "is-even": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/is-even": "^1.0.0"
+  },
+  "codegen": {
+    "schema": "schema.graphql",
+    "documents": "input.graphql",
+    "generates": {
+      "./generated/api.ts": {
+        "plugins": [
+          "typescript",
+          "typescript-operations"
+        ]
+      }
+    }
+  }
+}
